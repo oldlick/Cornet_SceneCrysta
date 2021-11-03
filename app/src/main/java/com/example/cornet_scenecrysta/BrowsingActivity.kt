@@ -1,17 +1,12 @@
 package com.example.cornet_scenecrysta
 
 import android.content.Intent
-import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
-
-import com.example.cornet_scenecrysta.Browsing_Activity_ViewCont.*
 
 class BrowsingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,21 +35,21 @@ class BrowsingActivity : AppCompatActivity() {
     }
 
     private val listenClicked = View.OnClickListener {
-        toast(this@BrowsingActivity,"test")
+        Toast.makeText(this,"clicked",Toast.LENGTH_SHORT).show()
         true
     }
     private val listenLongClicked = View.OnLongClickListener {
-        toast(this@BrowsingActivity,"long-clicked")
+        Toast.makeText(this,"long-clicked",Toast.LENGTH_SHORT).show()
         startActivity(Intent(applicationContext, DetailActivity::class.java))
         true
     }
     private val listenConfig = View.OnClickListener {
-        toast(this@BrowsingActivity,"test")
+        Toast.makeText(this,"config",Toast.LENGTH_SHORT).show()
         startActivity(Intent(applicationContext, ConfigActivity::class.java))
         true
     }
     private val listenRebrowse = View.OnClickListener {
-        toast(this@BrowsingActivity,"rebrowsed")
+        Toast.makeText(this,"rebrowse",Toast.LENGTH_SHORT).show()
         true
     }
 
